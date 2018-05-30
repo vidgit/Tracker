@@ -1,7 +1,16 @@
 document.getElementById('issueInputForm').addEventListener('submit',saveIssue);
+var uid;
 
 function generateUID(){
-    return -1;
+    if (localStorage.getItem('lastUID')==null){
+        localStorage.setItem("lastUID",1);
+        uid = 0;
+    }
+    else{
+        uid = parseInt(localStorage.getItem("lastUID"));
+        localStorage.setItem("lastUID", uid+1);
+    }
+    return uid+1;
 }
 
 function saveIssue(e){
@@ -59,8 +68,8 @@ function fetchIssues(){
                                     '<h3>'+desc+'</h3>'+
                                     '<p><span class="glyphicon glyphicon-time"></span>' + severity +"</p>"+
                                     '<p><span class="glyphicon glyphicon-user"></span>' + assignee + "</p>"+
-                                    '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a>'+
-                                    '<a href="# onclick="deleteIssue(\'' + id +'\')" class="btn btn-danger"> Delete </a>'+
+                                    '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="col-xs-3 btn btn-warning">Close</a>'+
+                                    '<a href="# onclick="deleteIssue(\'' + id +'\')" class="col-xs-3 btn btn-danger"> Delete </a>'+
                                     '</div>';
             }
     }
