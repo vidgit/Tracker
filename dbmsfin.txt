@@ -1,0 +1,17 @@
+The main reason for me to apply for financial aid is the monthly cost of the specialization.
+I am working part time while trying to support myself as a developer and student, while also paying my student loans.
+My salary as a part time worker is not enough, and to get ahead in my career I need to keep learning.
+The cost of the monthly subscription is too high for me to be able to afford.
+However the content being offered in this specialization is extremely useful.
+It provides very specific information that is required to move forward as a software developer and forsee the pitfalls associated with bad database design decisions that may make applications and processes much slower than what they need to be.
+In addition I come from a third world country where the monthly cost of the course subscription is very high compared to the average cost of living which with my given employment state makes it even harder for me.
+
+
+The content being offered in this specialization is extremely useful.
+In addition to software engineering being a very lucrative job, 
+it is additionally a job that allows you to make the jobs of other people easier.
+I come from an informal cs study background, so I took specializations in the past to increase my knowledge of object oriented programming and data structures and algorithms.
+I also studied web development and found that the fields that I the fields my knowledge was less were database systems and operating systems. 
+In order to augment my knowledge as a computer scientist I need to study database management systems and so I want to get financial aid to pursue this course, 
+as increased knowldege a certificate will help me go forward in my career.
+This specialization provides exactly that, a thorough study of database systems from relational to distributed to nosql, and expertise in all of these subjects is needed to succeed in the future.
