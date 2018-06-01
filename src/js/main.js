@@ -62,12 +62,12 @@ function fetchIssues(){
             var assignee = issues[i].assignedTo;
             var status = issues[i].status;
 
-            issuesList.innerHTML += '<div class="card card-body bg-light">'+
+            issuesList.innerHTML += '<div class="">'+
                                     '<h6>Issue ID:'+id+' </h6>'+
-                                    '<p><span class="label label-info">'+status+'</span></p>'+
+                                    '<p><span class="">'+status+'</span></p>'+
                                     '<h3>'+desc+'</h3>'+
-                                    '<p><span class="glyphicon glyphicon-time"></span>' + severity +"</p>"+
-                                    '<p><span class="glyphicon glyphicon-user"></span>' + assignee + "</p>"+
+                                    '<p><span class=""></span>' + severity +"</p>"+
+                                    '<p><span class=""></span>' + assignee + "</p>"+
                                     '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="col-xs-3 btn btn-warning">Close</a>'+
                                     '<a href="# onclick="deleteIssue(\'' + id +'\')" class="col-xs-3 btn btn-danger"> Delete </a>'+
                                     '</div>';
