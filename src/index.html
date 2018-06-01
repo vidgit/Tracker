@@ -11,29 +11,31 @@
 
     <title>Tracker</title>
 </head>
-<body onload="fetchIssues()">
+<body onload="">
  
-    <div id="issueHead" class="">
+    <div id="issueHead">
         <h1>To-Do List</h1>
-        <div class="">
+        <div>
         <form id="issueInputForm">
-            <div class=""> 
+            <div class="input-field"> 
+                <input required id="issueDescription" type="text" placeholder="Explain here...">
                 <label for="issueDescription">What do you have to do?</label>
-                <input required id="issueDescription" type="text" class="" placeholder="Explain here...">
             </div>
-            <div class="">
-                <label for="issueSeverity">How important is it?</label>
-                <select required name="severity" id="issueSeverity" class="">
+            <div class="input-field col s12">
+                <select name="severity" id="issueSeverity">
+                    <option value="null">Describe Severity</option>
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
                     <option value="High">High</option>
                 </select>
+                <label for="issueSeverity">How important is it?</label>
             </div>
-            <div class="">
+            
+            <div class="input-field col s12">
+                <input required id="assignee" type="text" placeholder="Put Day here...">         
                 <label for="assignee">When should it be done?</label>
-                <input required id="assignee" class="form-control" type="text" placeholder="Put Day here...">         
             </div>
-            <div class="">
+            <div>
                 <button type="submit" class="btn btn-primary">Add</button>
             </div>
         </form>

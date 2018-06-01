@@ -1,6 +1,8 @@
 document.getElementById('issueInputForm').addEventListener('submit',saveIssue);
 var uid;
-
+$(document).ready(function () {
+    $('select').material_select();
+});
 function generateUID(){
     if (localStorage.getItem('lastUID')==null){
         localStorage.setItem("lastUID",1);
