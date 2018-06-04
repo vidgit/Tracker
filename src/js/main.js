@@ -1,7 +1,18 @@
 document.getElementById('issueInputForm').addEventListener('submit',saveIssue);
-
+var uid;
+$(document).ready(function () {
+    $('select').material_select();
+});
 function generateUID(){
-    return -1;
+    if (localStorage.getItem('lastUID')==null){
+        localStorage.setItem("lastUID",1);
+        uid = 0;
+    }
+    else{
+        uid = parseInt(localStorage.getItem("lastUID"));
+        localStorage.setItem("lastUID", uid+1);
+    }
+    return uid+1;
 }
 
 function saveIssue(e){
@@ -53,14 +64,14 @@ function fetchIssues(){
             var assignee = issues[i].assignedTo;
             var status = issues[i].status;
 
-            issuesList.innerHTML += '<div class="card card-body bg-light">'+
+            issuesList.innerHTML += '<div class="">'+
                                     '<h6>Issue ID:'+id+' </h6>'+
-                                    '<p><span class="label label-info">'+status+'</span></p>'+
+                                    '<p><span class="">'+status+'</span></p>'+
                                     '<h3>'+desc+'</h3>'+
-                                    '<p><span class="glyphicon glyphicon-time"></span>' + severity +"</p>"+
-                                    '<p><span class="glyphicon glyphicon-user"></span>' + assignee + "</p>"+
-                                    '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a>'+
-                                    '<a href="# onclick="deleteIssue(\'' + id +'\')" class="btn btn-danger"> Delete </a>'+
+                                    '<p><span class=""></span>' + severity +"</p>"+
+                                    '<p><span class=""></span>' + assignee + "</p>"+
+                                    '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="col-xs-3 btn btn-warning">Close</a>'+
+                                    '<a href="# onclick="deleteIssue(\'' + id +'\')" class="col-xs-3 btn btn-danger"> Delete </a>'+
                                     '</div>';
             }
     }
